@@ -148,7 +148,7 @@ public class PoolClass : MonoBehaviour
 
         public override void Activate()
         {
-            Owner.Attack += BuffAmount;
+            //Owner.Attack += BuffAmount;
         }
     }
 
@@ -166,7 +166,7 @@ public class PoolClass : MonoBehaviour
 
         public override void Activate()
         {
-            Target.Defend -= DebuffAmount;
+            //Target.Defend -= DebuffAmount;
         }
     }
 

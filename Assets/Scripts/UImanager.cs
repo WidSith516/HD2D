@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class UImanager : MonoBehaviour
 {
-    public static UImanager instance;
-    public Text nameText;
-    public Text levelText;
+    //public static UImanager instance;
+    //public Text nameText;
+    //public Text levelText;
 
-    public Slider hpSlider;
-    public Slider mpSlider;
-    public Slider actSlider;
+    //public Slider hpSlider;
+    //public Slider mpSlider;
+    //public Slider actSlider;
 
     private void Awake()
     {
-        instance = this;
+        //instance = this;
     }
     void Start()
     {
@@ -29,24 +29,24 @@ public class UImanager : MonoBehaviour
     }
     public void InitHUD(Character character)
     {
-        nameText.text = character.Character_Name;
-        levelText.text="Lv."+character.Character_Level;
-        hpSlider.maxValue = character.MaxHealth;
-        hpSlider.value = character.CurrentHealth;
-        mpSlider.maxValue = character.MaxMagic;
-        mpSlider.value = character.CurrentMagic;
+        //nameText.text = character.Character_Name;
+        //levelText.text="Lv."+character.Character_Level;
+        //hpSlider.maxValue = character.MaxHealth;
+        //hpSlider.value = character.CurrentHealth;
+        ////mpSlider.maxValue = character.MaxMagic;
+        //mpSlider.value = character.CurrentMagic;
     }
     //Update¸üÐÂ×´Ì¬¼¯
     public void UpdateHp(float hp)
     {
-        hpSlider.value = hp;
+        //hpSlider.value = hp;
     }
     public void UpdateMp(float mp)
     {
-        hpSlider.value = mp;
+        //hpSlider.value = mp;
     }
     public void UpdateAct(float act) 
     {
-        actSlider.value = act;
+        //actSlider.value = act;
     }
 }
