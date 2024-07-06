@@ -55,7 +55,7 @@ public class PoolClass : MonoBehaviour
 
         public override void ApplyEffect()
         {
-            Target.CurrentHealth -= DamagePerTurn;
+            //Target.CurrentHealth -= DamagePerTurn;
         }
     }
 

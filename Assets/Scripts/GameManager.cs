@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
 
- 
+
     //public enum BattleStage
     //{
-    //    Start, // 战斗开始
+    //Start, // 战斗开始
     //    PlayerTurn, // 我方回合
     //    EnemyTurn, // 敌方回合
     //    Win, // 胜利
