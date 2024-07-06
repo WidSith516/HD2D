@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-<<<<<<< HEAD
 using TMPro;
 using static UnityEngine.Rendering.DebugUI;
-=======
-using DG.Tweening;
->>>>>>> 615a4e9e6f2e2940685789199062fbde24ecebe2
+
 
 public class GameManager : MonoBehaviour
 {
@@ -136,56 +133,40 @@ public class GameManager : MonoBehaviour
         //    }
         //}
 
-<<<<<<< HEAD
-=======
-        if (!PlayerRound)
-        {
-            if(PlayerDeltaTime > playerActionSpeed)
-            {
-                QTElock = true;
-                PlayerRound = true;
-            }
-        }
-        else
-        {
-            if (QTElock)
-            {
-                QTElock = false;
-                Pround++;
-                transform.DOMove( Player.transform.position += Vector3.right * 0.8f,12);
-                QTE_Panel.SetActive(true);
-                //回合内任务
-                StartCoroutine(PlayerTurn());
-            }
-            else
-            {
-                PlayerDeltaTime = 0;
-            }
-        }
->>>>>>> 615a4e9e6f2e2940685789199062fbde24ecebe2
-
+        //if (!PlayerRound)
+        //{
+            //if(PlayerDeltaTime > playerActionSpeed)
+            //{
+                //QTElock = true;
+                //PlayerRound = true;
+            //}
+        //}
+        //else
+        //{
+        //    if (QTElock)
+        //    {
+        //        QTElock = false;
+        //        Pround++;
+        //        //transform.DOMove( Player.transform.position += Vector3.right * 0.8f,12);
+        //        QTE_Panel.SetActive(true);
+        //        //回合内任务
+        //        StartCoroutine(PlayerTurn());
+        //    }
+        //    else
+        //    {
+        //        //PlayerDeltaTime = 0;
+        //    }
+        //}
 
         //if ((gameTime - enemyActionSpeed * Eround) / enemyActionSpeed > 1)
         //{
         //    Eround++;
+            //Debug.Log(Eround);
+            //transform.DOMove(Enemy.transform.position -= Vector3.right * 0.8f,12);
         //}
 
-<<<<<<< HEAD
-        //Round_Player_Progress.fillAmount = PlayerDeltaTime / playerActionSpeed;
+        //Round_Player_Progress.fillAmount = (gameTime - playerActionSpeed * Pround) / playerActionSpeed;
         //Round_Enemy_Progress.fillAmount = (gameTime - enemyActionSpeed * Pround) / enemyActionSpeed;
-        //******
-=======
-        if ((gameTime - enemyActionSpeed * Eround) / enemyActionSpeed > 1)
-        {
-            Eround++;
-            //Debug.Log(Eround);
-            transform.DOMove(Enemy.transform.position -= Vector3.right * 0.8f,12);
-        }
-
-        Round_Player_Progress.fillAmount = (gameTime - playerActionSpeed * Pround) / playerActionSpeed;
-        Round_Enemy_Progress.fillAmount = (gameTime - enemyActionSpeed * Pround) / enemyActionSpeed;
-
->>>>>>> 615a4e9e6f2e2940685789199062fbde24ecebe2
 
 
         //if (state == BattleStage.PlayerTurn && turn == 0)
