@@ -5,6 +5,7 @@ using UnityEngine.TextCore.Text;
 
 public class Enemy :Character
 {
+  
     //protected override Dictionary<Actiontext, string> GetActionTexts()
     //{
     //    return new Dictionary<Actiontext, string>()
