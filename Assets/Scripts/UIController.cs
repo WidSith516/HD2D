@@ -20,6 +20,10 @@ public class UIController : MonoBehaviour
     Image enemyRound;
     Image playerRoundFull;
     Image enemyRoundFull;
+    Image attack;
+    Image defend;
+    Image attackBox;
+    Image defendBox;
 
     // 关联QTE
     public QTEController QteController;
@@ -57,6 +61,18 @@ public class UIController : MonoBehaviour
                 case "enemyRoundFull":
                     enemyRoundFull = image;
                     break;
+                case "attack":
+                    attack = image;
+                    break;
+                case "defend":
+                    defend = image;
+                    break;
+                case "attackBox":
+                    attackBox = image;
+                    break;
+                case "defendBox":
+                    defendBox = image;
+                    break;
                 default:
                     Debug.LogWarning(string.Format("{0} no reference get", image.name));
                     break;
@@ -66,6 +82,9 @@ public class UIController : MonoBehaviour
         // 发光条默认不显示
         playerRoundFull.gameObject.SetActive(false);
         enemyRoundFull.gameObject.SetActive(false);
+
+        // 战斗按钮默认不显示
+        HideBattleUI();
 
         // 初始化重置按钮
         Button[] buttons = gameObject.GetComponentsInChildren<Button>();
@@ -101,6 +120,22 @@ public class UIController : MonoBehaviour
         Debug.Log("ShowHUD");
         GameObject canvas = Camera.main.transform.Find("CanvasHUD").gameObject;
         canvas.SetActive(true);
+    }
+
+    public void ShowBattleUI()
+    {
+        attack.gameObject.SetActive(true);
+        defend.gameObject.SetActive(true);
+        attackBox.gameObject.SetActive(true);
+        defendBox.gameObject.SetActive(true);
+    }
+
+    public void HideBattleUI()
+    {
+        attack.gameObject.SetActive(false);
+        defend.gameObject.SetActive(false);
+        attackBox.gameObject.SetActive(false);
+        defendBox.gameObject.SetActive(false);
     }
 
     public void SetPlayerHp(float cur, float ttl)
@@ -167,6 +202,7 @@ public class UIController : MonoBehaviour
     {
         Debug.Log("模拟外部绑定按钮点击事件");
         // QteController.StartQteTask(5, 0.5f, 0.05f, OnQteFinishedCB);
+        // ShowBattleUI();
     }
 
     // test function
