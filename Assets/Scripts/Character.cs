@@ -17,9 +17,9 @@ public class Character: MonoBehaviour
     public float CurrentHealth;
     //角色最大韧性与当前韧性
     public float MaxToughness;
-    public float CurrentMagic;
+    public float CurrentToughness;
     //角色战斗属性
-
+    
     public enum AttackType
     {
         Attack,
@@ -38,7 +38,10 @@ public class Character: MonoBehaviour
 
 
     }
-
-
+    public void TakeDamage()
+    {
+        //引入战斗公式造成伤害
+        Debug.Log(Character_Name+"被击中了" );
+    }
 }
 

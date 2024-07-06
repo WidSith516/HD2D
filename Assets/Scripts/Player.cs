@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
+  
     //protected override Dictionary<Actiontext, string> GetActionTexts()
     //{
     //    return new Dictionary<Actiontext, string>()

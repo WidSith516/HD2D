@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+
+ 
     //public enum BattleStage
     //{
     //    Start, // 战斗开始
@@ -112,7 +115,7 @@ public class GameManager : MonoBehaviour
             {
                 QTElock = false;
                 Pround++;
-                Player.transform.position += Vector3.right * 1f;
+                transform.DOMove( Player.transform.position += Vector3.right * 0.8f,12);
                 QTE_Panel.SetActive(true);
                 //回合内任务
                 StartCoroutine(PlayerTurn());
@@ -129,7 +132,7 @@ public class GameManager : MonoBehaviour
         {
             Eround++;
             //Debug.Log(Eround);
-            Enemy.transform.position -= Vector3.right * 1f;
+            transform.DOMove(Enemy.transform.position -= Vector3.right * 0.8f,12);
         }
 
         Round_Player_Progress.fillAmount = (gameTime - playerActionSpeed * Pround) / playerActionSpeed;
