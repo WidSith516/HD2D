@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
 
-
     //public enum BattleStage
     //{
     //Start, // Õ½¶·¿ªÊ¼
@@ -450,5 +449,6 @@ public class GameManager : MonoBehaviour
 
 
 
+    //20240706
 }
 
